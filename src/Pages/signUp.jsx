@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function SignUp() {
 
@@ -12,6 +13,7 @@ export default function SignUp() {
   const handleGender = (e) => {
     setGender(e.target.value);
   }
+  
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -96,9 +98,8 @@ export default function SignUp() {
 
               <input type="submit" value="SIGN UP" />
               <br /><br />
-
-        <a href="/">Already have an account? Login instead</a>
-    </form>
+      </form>
+      <NavLink to="/">Already a user? Login instead</NavLink>
 </div>
 
   )
